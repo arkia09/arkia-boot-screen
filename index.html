@@ -1,0 +1,32 @@
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap" rel="stylesheet">
+<div class="scene">
+  <div id="greeting">Good morning, Surbhi!</div>
+
+  <svg id="eye-svg" width="260" height="140" viewBox="0 0 260 140" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <clipPath id="eye-clip">
+        <path d="M20,70 Q65,18 130,18 Q195,18 240,70 Q195,122 130,122 Q65,122 20,70 Z"/>
+      </clipPath>
+    </defs>
+
+    <g id="eye-root">
+      <path d="M20,70 Q65,18 130,18 Q195,18 240,70 Q195,122 130,122 Q65,122 20,70 Z"
+            fill="white" stroke="#111" stroke-width="3"/>
+
+      <g clip-path="url(#eye-clip)">
+        <ellipse id="pupil" cx="130" cy="70" rx="26" ry="30" fill="#111"/>
+        <ellipse id="iris-slit" cx="130" cy="70" rx="7" ry="20" fill="#333"/>
+
+        <rect id="lid-top" x="0" y="0" width="260" height="70" fill="#000" transform="translate(0,-72)"/>
+        <rect id="lid-bot" x="0" y="70" width="260" height="72" fill="#000" transform="translate(0,72)"/>
+      </g>
+
+      <path d="M20,70 Q65,122 130,122 Q195,122 240,70"
+            fill="none" stroke="#111" stroke-width="3"/>
+    </g>
+  </svg>
+</div>
+
+<script src="script.js" defer></script>
